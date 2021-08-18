@@ -5,11 +5,10 @@ services:
   container_name: newt_webapp
   build:
    context: .
-   dockerfile: Dockerfile
   ports:
-   - 8080:8080
+   - ${PORT}:${PORT}
   environment:
-   - port=8080
+    - PORT  # pass variable to container
   volumes:
    - .:/home/node/app
   command: >
