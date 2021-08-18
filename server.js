@@ -3,7 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 const multer = require('multer');
 var server = require('http').createServer(app);
-var port = process.env.port || 80;
+var port = process.env.port || 8080;
 app.use(bodyParser.urlencoded({
 	limit: "100mb",
 	extended: false
@@ -16,7 +16,7 @@ var ajaxUtilities = require('./app/js/ajax-utilities');
  * located in ajax-utilities. The desired function is passed in the URL.
  */
 function requestHandler(req, res){
-	
+
 	// :fn holds the name of the function to call in ajax-utilities.js
 	var fn = req.params.fn || "";
 	if (typeof ajaxUtilities[fn] !== "function") {
