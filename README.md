@@ -3,6 +3,11 @@
 This is a fork of [Newt](https://github.com/iVis-at-Bilkent/newt), a web based, open source viewer and editor for pathways in [Systems Biological Graphical Notation (SBGN)](https://sbgn.github.io/) and Simple Interaction Format (SIF).
 
 
+## docker/nginx compatibility:
+- URL hard coded to 'http://web:5000/static/data/pis-sbgn.sbgn'
+- Removed load file menus
+
+
 # How to run
 
 ```bash
