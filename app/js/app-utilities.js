@@ -2491,7 +2491,7 @@ appUtilities.filterMapProperties = function(obj) {
 appUtilities.launchWithModelFile = function() {
 
   var paramObj = getQueryParameters();
-  var url_path = paramObj.url;
+  var url_path = 'http://web:5000/static/data/pis-sbgn.sbgn'; //paramObj.url;
   var uri_path = paramObj.uri;
 
   var chiseInstance = appUtilities.getActiveChiseInstance();
