@@ -4,7 +4,7 @@ This is a fork of [Newt](https://github.com/iVis-at-Bilkent/newt), a web based, 
 
 
 ## docker/nginx compatibility:
-- URL hard coded to 'http://web:5000/static/data/pis-sbgn.sbgn'
+- URL hard coded to 'http://web:5000/static/data/pss-sbgn.sbgn'
 - Removed load file menus
 
 
