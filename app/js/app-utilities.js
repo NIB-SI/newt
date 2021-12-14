@@ -2491,7 +2491,7 @@ appUtilities.filterMapProperties = function(obj) {
 appUtilities.launchWithModelFile = function() {
 
   var paramObj = getQueryParameters();
-  var url_path = 'http://web:5000/static/data/pss-sbgn.sbgn'; //paramObj.url;
+  var url_path = 'http://web:5000/downloads/pss/pss-sbgn-newt-public.sbgn'; //paramObj.url;
   var uri_path = paramObj.uri;
 
   var chiseInstance = appUtilities.getActiveChiseInstance();
