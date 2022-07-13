@@ -593,6 +593,22 @@ inspectorUtilities.handleSBGNInspector = function () {
         $("#sbgn-inspector-style-"+identifier+"-panel").html(html);
       }
 
+      function addSection(identifier, title, hasSubtitleSection) {
+        html =  "<div  class='panel-heading' data-toggle='collapse' data-target='#"+identifier+"-collapsable' aria-expanded='true'>"+
+                  "<p class='panel-title accordion-toggle'>"+title+"</p>"+
+                "</div>"+
+                "<div style='margin-top: 5px;align: center;text-align: center;' id='"+identifier+"-collapsable' class='panel-collapse collapse in' aria-expanded='true'>";
+        if (hasSubtitleSection) {
+          html += "<div class='panel-body' style='padding-top: 3px; padding-left: 3px;' id='"+identifier+"-title'></div>";
+        }
+        html += "<div id='"+identifier+"-container'></div>"+
+                "</div>";
+
+        $('#sbgn-inspector-style-panel-group').append('<div id="sbgn-inspector-style-'+identifier+'-panel" class="panel" ></div>');
+        $("#sbgn-inspector-style-"+identifier+"-panel").html(html);
+      }
+
+
       if (geneClass === 'macromolecule' || geneClass === 'nucleic acid feature' ||
           geneClass === 'unspecified entity' || geneClass === 'BA plain' || 
           geneClass === 'BA macromolecule' || geneClass === 'BA nucleic acid feature' ||
@@ -609,7 +625,7 @@ inspectorUtilities.handleSBGNInspector = function () {
      
       
       // annotations handling part
-      addCollapsibleSection("annotations", "Custom Properties", false);
+      addSection("annotations", "Custom Properties", false);
       annotHandler.fillAnnotationsContainer(selectedEles[0]);
     }
 
